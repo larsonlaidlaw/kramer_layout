@@ -11,7 +11,7 @@
     height: 6rem;
     width: 3.6rem;
     position: relative;
-    top: 7.5rem;
+    top: 0;
     right: 0;
     z-index: 2000;
     cursor: pointer;
@@ -24,7 +24,6 @@
     position: relative;
     top: -10rem;
     right: -10rem;
-    background-color: #000;
     z-index: 1000;
     transition: all .2s;
   }
@@ -39,6 +38,7 @@
     opacity: 0;
     width: 0;
     transition: all .2s;
+    background-color: #000;
   }
 
   &__list {
