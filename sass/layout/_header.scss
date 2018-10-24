@@ -1,0 +1,15 @@
+.header {
+  height: $header-height;
+  font-family: KramerFutura;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__logo-box {
+    // margin-left: 8.75rem;
+  }
+
+  &__logo {
+    height: 1.5rem;
+  }
+}

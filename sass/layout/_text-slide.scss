@@ -1,0 +1,150 @@
+.text-slide {
+  flex: 1;
+  max-width: 136.6rem;
+
+  &__left-column {
+    width: 40%;
+  }
+
+  &__right-column {
+    width: 60%;
+  }
+
+  &__heading-primary {
+    font-family: KramerFuturaLight;
+    font-size: 3.1rem;
+    font-weight: normal;
+  }
+
+  &__heading-secondary {
+    font-family: SilkSerifLight;
+    font-weight: 100;
+    font-size: 9rem;
+    line-height: 9.2rem;
+    margin-top: -1.7rem;
+    max-width: 60rem;
+
+    &-wide {
+      max-width: 69rem;
+      letter-spacing: -4px;
+    }
+  }
+
+  &__copy {
+    font-family: KramerFuturaLight;
+    font-size: 2.6rem;
+    line-height: 4.6rem;
+    margin-top: 2rem;
+    max-width: 71.8rem;
+  }
+
+
+  &__lists-container {
+    min-width: 67rem;
+    margin-top: -1.8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__single-list-container {
+    margin-top: 1rem;
+    margin-right: 8.5rem;
+    width: 29rem;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &__list-header {
+    font-size: 3.8rem;
+    font-family: SilkSerifLight;
+    font-weight: 200;
+  }
+
+  &__list {
+    margin-top: 1.6rem;
+    margin-left: 2.7rem;
+    font-family: KramerFuturaLight;
+    list-style-type: none;
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+    width: 19.2rem;
+  }
+
+  &__clients-container {
+    margin-top: -1rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__clients-header {
+    font-size: 4.2rem;
+    font-family: SilkSerifLight;
+    font-weight: 200;
+    width: 27rem;
+  }
+
+  &__client-list {
+    margin-left: .8rem;
+    margin-top: 1rem;
+    font-family: KramerFuturaLight;
+    list-style-type: none;
+    font-size: 1.7rem;
+    line-height: 2.0rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    li {
+      margin-left: 7.5rem;
+    }
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .text-slide {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    &__left-column {
+      width: 100%;
+      margin-left: 0;
+      padding: 2em;
+    }
+    &__heading-secondary {
+      font-size: 3.8rem;
+      line-height: 4rem;
+    }
+
+    &__right-column {
+      width: 100%;
+      padding: 2em;
+    }
+
+    &__lists-container {
+      flex-direction: column;
+      min-width: 30rem;
+    }
+
+    &__clients-container {
+      flex-direction: column;
+      margin-left: 0;
+    }
+
+    &__client-list {
+      flex-wrap: nowrap;
+
+      li {
+        margin-left: 0;
+      }
+    }
+  }
+}

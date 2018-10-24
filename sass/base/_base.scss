@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before, {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines the value of 1 rem. Standard font size is 16px. We want a base10 system. 16 * 62.5 = 10
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}

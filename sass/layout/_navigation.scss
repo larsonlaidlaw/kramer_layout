@@ -1,0 +1,124 @@
+.navigation {
+  width: 3.6rem;
+  // margin-right: 10rem;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    display: inline-block;
+    height: 6rem;
+    width: 3.6rem;
+    position: relative;
+    top: 7.5rem;
+    right: 0;
+    z-index: 2000;
+    cursor: pointer;
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: relative;
+    top: -10rem;
+    right: -10rem;
+    background-color: #000;
+    z-index: 1000;
+    transition: all .2s;
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all .2s;
+  }
+
+  &__list {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    list-style: none;
+  }
+  &__item {
+
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-family: SilkSerif;
+      color: white;
+      font-size: 7rem;
+      text-decoration: none;
+      transition: all .4s;
+    }
+
+    &:hover,
+    &:active {
+      transform: translateX(.5rem);
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(100);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+    animation: moveInTop 1s ease-out;
+  }
+
+  //ICON
+
+  &__icon {
+    position: relative;
+    margin-top: 3rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3.6rem;
+      height: 2px;
+      background-color: #000;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content:"";
+      position: absolute;
+      left: 0;
+      transition: all .4s;
+    }
+
+    &::before { top: -1rem;}
+    &::after { top: 1rem;}
+
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      background-color: #fff;
+      transform: rotate(135deg)
+    }
+
+    &::after {
+      top: 0;
+      background-color: #fff;
+      transform: rotate(-135deg)
+    }
+  }
+}

@@ -1,0 +1,255 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.header {
+  height: 10rem;
+  font-family: KramerFutura;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .header__logo {
+    height: 1.5rem; }
+
+.navigation {
+  width: 3.6rem; }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    display: inline-block;
+    height: 6rem;
+    width: 3.6rem;
+    position: relative;
+    top: 7.5rem;
+    right: 0;
+    z-index: 2000;
+    cursor: pointer; }
+  .navigation__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: relative;
+    top: -10rem;
+    right: -10rem;
+    background-color: #000;
+    z-index: 1000;
+    transition: all .2s; }
+  .navigation__nav {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all .2s; }
+  .navigation__list {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    list-style: none; }
+  .navigation__link:link, .navigation__link:visited {
+    display: inline-block;
+    font-family: SilkSerif;
+    color: white;
+    font-size: 7rem;
+    text-decoration: none;
+    transition: all .4s; }
+  .navigation__link:hover, .navigation__link:active {
+    transform: translateX(0.5rem); }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(100); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 100%;
+    animation: moveInTop 1s ease-out; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 3rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 3.6rem;
+      height: 2px;
+      background-color: #000;
+      display: inline-block; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .4s; }
+    .navigation__icon::before {
+      top: -1rem; }
+    .navigation__icon::after {
+      top: 1rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent; }
+    .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+      top: 0;
+      background-color: #fff;
+      transform: rotate(135deg); }
+    .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+      top: 0;
+      background-color: #fff;
+      transform: rotate(-135deg); }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw; }
+
+.slides-container {
+  flex: 1; }
+
+.slide {
+  height: calc(100vh - 10rem);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .slide__content {
+    display: flex; }
+
+@media (max-width: 1000px) {
+  .slide__content {
+    flex-direction: column; } }
+
+.text-slide {
+  flex: 1;
+  max-width: 136.6rem; }
+  .text-slide__left-column {
+    width: 40%; }
+  .text-slide__right-column {
+    width: 60%; }
+  .text-slide__heading-primary {
+    font-family: KramerFuturaLight;
+    font-size: 3.1rem;
+    font-weight: normal; }
+  .text-slide__heading-secondary {
+    font-family: SilkSerifLight;
+    font-weight: 100;
+    font-size: 9rem;
+    line-height: 9.2rem;
+    margin-top: -1.7rem;
+    max-width: 60rem; }
+    .text-slide__heading-secondary-wide {
+      max-width: 69rem;
+      letter-spacing: -4px; }
+  .text-slide__copy {
+    font-family: KramerFuturaLight;
+    font-size: 2.6rem;
+    line-height: 4.6rem;
+    margin-top: 2rem;
+    max-width: 71.8rem; }
+  .text-slide__lists-container {
+    min-width: 67rem;
+    margin-top: -1.8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .text-slide__single-list-container {
+    margin-top: 1rem;
+    margin-right: 8.5rem;
+    width: 29rem; }
+    .text-slide__single-list-container:nth-child(2n) {
+      margin-right: 0; }
+    .text-slide__single-list-container:nth-child(4n) {
+      margin-right: 0; }
+  .text-slide__list-header {
+    font-size: 3.8rem;
+    font-family: SilkSerifLight;
+    font-weight: 200; }
+  .text-slide__list {
+    margin-top: 1.6rem;
+    margin-left: 2.7rem;
+    font-family: KramerFuturaLight;
+    list-style-type: none;
+    font-size: 1.4rem;
+    line-height: 2.0rem;
+    width: 19.2rem; }
+  .text-slide__clients-container {
+    margin-top: -1rem;
+    display: flex;
+    flex-direction: row; }
+  .text-slide__clients-header {
+    font-size: 4.2rem;
+    font-family: SilkSerifLight;
+    font-weight: 200;
+    width: 27rem; }
+  .text-slide__client-list {
+    margin-left: .8rem;
+    margin-top: 1rem;
+    font-family: KramerFuturaLight;
+    list-style-type: none;
+    font-size: 1.7rem;
+    line-height: 2.0rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .text-slide__client-list li {
+      margin-left: 7.5rem; }
+
+@media (max-width: 1000px) {
+  .text-slide {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; }
+    .text-slide__left-column {
+      width: 100%;
+      margin-left: 0;
+      padding: 2em; }
+    .text-slide__heading-secondary {
+      font-size: 3.8rem;
+      line-height: 4rem; }
+    .text-slide__right-column {
+      width: 100%;
+      padding: 2em; }
+    .text-slide__lists-container {
+      flex-direction: column;
+      min-width: 30rem; }
+    .text-slide__clients-container {
+      flex-direction: column;
+      margin-left: 0; }
+    .text-slide__client-list {
+      flex-wrap: nowrap; }
+      .text-slide__client-list li {
+        margin-left: 0; } }
+
+.case-study-landing-slide {
+  height: 100vh;
+  flex-grow: 1;
+  background-image: url("../assets/img/kate-spade__cs-landing.jpg");
+  background-size: cover; }
+
+@font-face {
+  font-family: KramerFuturaLight;
+  src: url("../../assets/fonts/kramer_futura/KramerFutura-Light.ttf"); }
+
+@font-face {
+  font-family: KramerFutura;
+  src: url("../../assets/fonts/kramer_futura/KramerFutura.ttf"); }
+
+@font-face {
+  font-family: KramerFuturaBook;
+  src: url("../../assets/fonts/kramer_futura/KramerFutura-Book.ttf"); }
+
+@font-face {
+  font-family: KramerFuturaBold;
+  src: url("../../assets/fonts/kramer_futura/KramerFuturaLT-Bold.ttf"); }
+
+@font-face {
+  font-family: KramerFuturaHeavy;
+  src: url("../../assets/fonts/kramer_futura/KramerFuturaLT-Bold.ttf"); }
+
+@font-face {
+  font-family: SilkSerifLight;
+  src: url("../../assets/fonts/silk/SilkType-SilkSerif-Light-copy.otf"); }
