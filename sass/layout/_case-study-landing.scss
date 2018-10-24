@@ -1,6 +1,81 @@
-.case-study-landing-slide {
-  height: 100vh;
-  flex-grow: 1;
-  background-image: url('../assets/img/kate-spade__cs-landing.jpg');
-  background-size: cover;
+.case-study {
+  &__landing-slide {
+    height: 100vh;
+    flex-grow: 1;
+
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__kate-spade {
+    &__landing-slide {
+      background-image: linear-gradient(
+      to right bottom,
+      rgba(#000, 0.5),
+      rgba(#bbb, 0.5)),
+      url('../assets/img/kate-spade__cs-landing.jpg');
+    }
+  }
+
+  &__alexander-wang {
+    &__landing-slide {
+      background-image: linear-gradient(
+      to right bottom,
+      rgba(#000, 0.5),
+      rgba(#bbb, 0.5)),
+      url('../assets/img/alexander-wang__cs-landing.png');
+    }
+  }
+
+  &__joe-fresh {
+    &__landing-slide {
+      background-image: linear-gradient(
+      to right bottom,
+      rgba(#000, 0.5),
+      rgba(#bbb, 0.5)),
+      url('../assets/img/joe-fresh__cs-landing.png');
+    }
+  }
+
+  &__spanx {
+    &__landing-slide {
+      background-image: linear-gradient(
+      to right bottom,
+      rgba(#000, 0.5),
+      rgba(#bbb, 0.5)),
+      url('../assets/img/spanx__cs-landing.png');
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    a {
+      margin-top: 5.8rem;
+      font-family: KramerFutura;
+      font-weight: 200;
+      font-size: 1.75rem;
+      line-height: 2rem;
+      color: #fff;
+    }
+  }
+
+  &__company-logo {
+    &__kate-spade{
+      img {
+        width: 330px;
+        height: 163px;
+      }
+    }
+    &__alexander-wang{
+      img {
+        width: 655px;
+        height: 49px;
+      }
+    }
+  }
 }

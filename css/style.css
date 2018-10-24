@@ -33,15 +33,6 @@ body {
     right: 0;
     z-index: 2000;
     cursor: pointer; }
-  .navigation__background {
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    position: relative;
-    top: -10rem;
-    right: -10rem;
-    z-index: 1000;
-    transition: all .2s; }
   .navigation__nav {
     height: 100vh;
     width: 100vw;
@@ -53,11 +44,42 @@ body {
     width: 0;
     transition: all .2s;
     background-color: #000; }
-  .navigation__list {
+  .navigation__nav-container {
+    background-color: pink;
     position: absolute;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
+    font-family: KramerFutura;
+    font-size: 1.9rem;
+    color: #fff;
+    display: flex;
+    flex-direction: row; }
+  .navigation__right {
+    flex: 1;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .navigation__email-address-container {
+    display: flex;
+    flex-direction: column; }
+    .navigation__email-address-container a {
+      font-family: KramerFutura;
+      font-size: 1.9rem;
+      text-decoration: none;
+      color: #fff; }
+  .navigation__social-media-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
+    .navigation__social-media-container a {
+      margin-right: 9.7rem;
+      font-family: KramerFutura;
+      font-size: 1.9rem;
+      text-decoration: underline;
+      color: #fff; }
+  .navigation__list {
     list-style: none; }
   .navigation__link:link, .navigation__link:visited {
     display: inline-block;
@@ -68,8 +90,6 @@ body {
     transition: all .4s; }
   .navigation__link:hover, .navigation__link:active {
     transform: translateX(0.5rem); }
-  .navigation__checkbox:checked ~ .navigation__background {
-    transform: scale(100); }
   .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
     width: 100%;
@@ -112,7 +132,7 @@ body {
   flex: 1; }
 
 .slide {
-  height: calc(100vh - 10rem);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -225,11 +245,45 @@ body {
       .text-slide__client-list li {
         margin-left: 0; } }
 
-.case-study-landing-slide {
+.case-study__landing-slide {
   height: 100vh;
   flex-grow: 1;
-  background-image: url("../assets/img/kate-spade__cs-landing.jpg");
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.case-study__kate-spade__landing-slide {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/kate-spade__cs-landing.jpg"); }
+
+.case-study__alexander-wang__landing-slide {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/alexander-wang__cs-landing.png"); }
+
+.case-study__joe-fresh__landing-slide {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/joe-fresh__cs-landing.png"); }
+
+.case-study__spanx__landing-slide {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/spanx__cs-landing.png"); }
+
+.case-study__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  .case-study__content a {
+    margin-top: 5.8rem;
+    font-family: KramerFutura;
+    font-weight: 200;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    color: #fff; }
+
+.case-study__company-logo__kate-spade img {
+  width: 330px;
+  height: 163px; }
+
+.case-study__company-logo__alexander-wang img {
+  width: 655px;
+  height: 49px; }
 
 @font-face {
   font-family: KramerFuturaLight;
