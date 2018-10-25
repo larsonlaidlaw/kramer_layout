@@ -9,13 +9,10 @@
     justify-content: center;
   }
 
-  &__kate-spade {
+  &__joe-fresh {
     &__landing-slide {
-      background-image: linear-gradient(
-      to right bottom,
-      rgba(#000, 0.5),
-      rgba(#bbb, 0.5)),
-      url('../assets/img/kate-spade__cs-landing.jpg');
+      background-image: url('../assets/img/joe-fresh__cs-landing.png');
+      background-position: bottom;
     }
   }
 
@@ -29,13 +26,14 @@
     }
   }
 
-  &__joe-fresh {
+  &__kate-spade {
     &__landing-slide {
       background-image: linear-gradient(
       to right bottom,
       rgba(#000, 0.5),
       rgba(#bbb, 0.5)),
-      url('../assets/img/joe-fresh__cs-landing.png');
+      url('../assets/img/kate-spade__cs-landing.jpg');
+      background-position: center;
     }
   }
 
@@ -46,6 +44,7 @@
       rgba(#000, 0.5),
       rgba(#bbb, 0.5)),
       url('../assets/img/spanx__cs-landing.png');
+      background-position: center;
     }
   }
 
@@ -65,16 +64,23 @@
   }
 
   &__company-logo {
-    &__kate-spade{
+    &__joe-fresh{
+      img {
+        width: 300px;
+      }
+    }
+    &__kate-spade {
       img {
         width: 330px;
         height: 163px;
       }
     }
-    &__alexander-wang{
+    &__alexander-wang {
       img {
-        width: 655px;
-        height: 49px;
+        width: 80%;
+        max-width: 655px;
+        min-width: 400px;
+        // height: 49px;
       }
     }
   }

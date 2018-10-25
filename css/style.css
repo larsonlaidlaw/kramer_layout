@@ -17,19 +17,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end; }
+  .header__logo-box {
+    margin-left: 8.75rem; }
   .header__logo {
     height: 1.5rem; }
 
 .navigation {
-  width: 3.6rem; }
+  width: 3.6rem;
+  margin-right: 10rem; }
   .navigation__checkbox {
     display: none; }
   .navigation__button {
     display: inline-block;
-    height: 6rem;
-    width: 3.6rem;
+    height: 2.5rem;
+    width: 100%;
     position: relative;
-    top: 0;
+    top: 1rem;
     right: 0;
     z-index: 2000;
     cursor: pointer; }
@@ -43,29 +46,30 @@ body {
     opacity: 0;
     width: 0;
     transition: all .2s;
-    background-color: #000; }
+    background-color: #231F20;
+    overflow: hidden; }
   .navigation__nav-container {
-    background-color: pink;
+    width: 80rem;
     position: absolute;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    font-family: KramerFutura;
-    font-size: 1.9rem;
-    color: #fff;
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: space-between; }
   .navigation__right {
-    flex: 1;
-    background-color: red;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    font-family: KramerFuturaBook;
+    font-size: 1.9rem;
+    color: #fff; }
   .navigation__email-address-container {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column; }
     .navigation__email-address-container a {
-      font-family: KramerFutura;
+      font-family: KramerFuturaBold;
       font-size: 1.9rem;
       text-decoration: none;
       color: #fff; }
@@ -87,16 +91,14 @@ body {
     color: white;
     font-size: 7rem;
     text-decoration: none;
-    transition: all .4s; }
+    transition: all .2s; }
   .navigation__link:hover, .navigation__link:active {
     transform: translateX(0.5rem); }
   .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
-    width: 100%;
-    animation: moveInTop 1s ease-out; }
+    width: 100%; }
   .navigation__icon {
-    position: relative;
-    margin-top: 3rem; }
+    position: relative; }
     .navigation__icon, .navigation__icon::before, .navigation__icon::after {
       width: 3.6rem;
       height: 2px;
@@ -153,7 +155,8 @@ body {
   .text-slide__heading-primary {
     font-family: KramerFuturaLight;
     font-size: 3.1rem;
-    font-weight: normal; }
+    font-weight: normal;
+    margin-left: 8.75rem; }
   .text-slide__heading-secondary {
     font-family: SilkSerifLight;
     font-weight: 100;
@@ -253,17 +256,20 @@ body {
   align-items: center;
   justify-content: center; }
 
-.case-study__kate-spade__landing-slide {
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/kate-spade__cs-landing.jpg"); }
+.case-study__joe-fresh__landing-slide {
+  background-image: url("../assets/img/joe-fresh__cs-landing.png");
+  background-position: bottom; }
 
 .case-study__alexander-wang__landing-slide {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/alexander-wang__cs-landing.png"); }
 
-.case-study__joe-fresh__landing-slide {
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/joe-fresh__cs-landing.png"); }
+.case-study__kate-spade__landing-slide {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/kate-spade__cs-landing.jpg");
+  background-position: center; }
 
 .case-study__spanx__landing-slide {
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/spanx__cs-landing.png"); }
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(187, 187, 187, 0.5)), url("../assets/img/spanx__cs-landing.png");
+  background-position: center; }
 
 .case-study__content {
   display: flex;
@@ -277,13 +283,17 @@ body {
     line-height: 2rem;
     color: #fff; }
 
+.case-study__company-logo__joe-fresh img {
+  width: 300px; }
+
 .case-study__company-logo__kate-spade img {
   width: 330px;
   height: 163px; }
 
 .case-study__company-logo__alexander-wang img {
-  width: 655px;
-  height: 49px; }
+  width: 80%;
+  max-width: 655px;
+  min-width: 400px; }
 
 @font-face {
   font-family: KramerFuturaLight;
@@ -299,10 +309,6 @@ body {
 
 @font-face {
   font-family: KramerFuturaBold;
-  src: url("../../assets/fonts/kramer_futura/KramerFuturaLT-Bold.ttf"); }
-
-@font-face {
-  font-family: KramerFuturaHeavy;
   src: url("../../assets/fonts/kramer_futura/KramerFuturaLT-Bold.ttf"); }
 
 @font-face {

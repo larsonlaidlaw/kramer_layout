@@ -1,6 +1,6 @@
 .navigation {
   width: 3.6rem;
-  // margin-right: 10rem;
+  margin-right: 10rem;
 
   &__checkbox {
     display: none;
@@ -8,10 +8,10 @@
 
   &__button {
     display: inline-block;
-    height: 6rem;
-    width: 3.6rem;
+    height: 2.5rem;
+    width: 100%;
     position: relative;
-    top: 0;
+    top: 1rem;;
     right: 0;
     z-index: 2000;
     cursor: pointer;
@@ -27,36 +27,39 @@
     opacity: 0;
     width: 0;
     transition: all .2s;
-    background-color: #000;
+    background-color: #231F20;
+    overflow: hidden;
   }
 
-
   &__nav-container {
-    background-color: pink;
+    width: 80rem;
     position: absolute;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    font-family: KramerFutura;
-    font-size: 1.9rem;
-    color: #fff;
     display: flex;
     flex-direction: row;
-  }
-
-  &__right {
-    flex: 1;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
   }
 
+  &__left {
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: KramerFuturaBook;
+    font-size: 1.9rem;
+    color: #fff;
+  }
+
   &__email-address-container {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     a {
-      font-family: KramerFutura;
+      font-family: KramerFuturaBold;
       font-size: 1.9rem;
       text-decoration: none;
       color: #fff;
@@ -92,7 +95,7 @@
       color: white;
       font-size: 7rem;
       text-decoration: none;
-      transition: all .4s;
+      transition: all .2s;
     }
 
     &:hover,
@@ -101,18 +104,15 @@
     }
   }
 
-
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
-    animation: moveInTop 1s ease-out;
   }
 
   //ICON
 
   &__icon {
     position: relative;
-    margin-top: 3rem;
 
     &,
     &::before,
